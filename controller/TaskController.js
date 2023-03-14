@@ -37,12 +37,12 @@ const getById = async (req, res) => {
     }
 };
 
-const updateOneTask = async (res, req) => {
+const updateOneTask = async (req, res) => {//os parametros da requisição , precisão estar na ordem correta
     try {
-
         const task = req.body;
         await Task.updateOne({ _id: req.params.id }, task);
-        res.redirect("/");
+        res.redirect("/");//redireciona para página da lista de tarefas
+        return console.log("Tarefa atualizada com sucesso!")
     } catch (err) {
         res.status(500).send({ error: err.message });
     }
@@ -52,5 +52,5 @@ module.exports = {
     getAllTasks,
     createTask,
     getById,
-    updateOneTask
+    updateOneTask,//necessário a virgula no ultima função
 };
