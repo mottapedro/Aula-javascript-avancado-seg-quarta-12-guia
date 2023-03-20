@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const conectToDb = () => {
-    mongoose.connect("mongodb+srv://pedro_motta:pJVTegetGCZHj6aB@aula-node-exemplo-clust.wkgj8dp.mongodb.net/?retryWrites=true&w=majority",
+    mongoose.connect(`mongodb+srv://pedro_motta:pJVTegetGCZHj6aB@aula-node-exemplo-clust.wkgj8dp.mongodb.net/?retryWrites=true&w=majority`,
 
         {
             useNewUrlParser: true,
